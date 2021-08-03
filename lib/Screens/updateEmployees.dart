@@ -18,7 +18,7 @@ class updateEmployee extends StatefulWidget {
 
 Future<EmployeeModel> updateEmployees(
     EmployeeModel employee, BuildContext context) async {
-  var Url = "http://localhost:8080/updateemployee";
+  var Url = "https://lippe-hero-app.herokuapp.com/updateemployee";
   var response = await http.put(Url,
       headers: <String, String>{"Content-Type": "application/json"},
       body: jsonEncode(employee));

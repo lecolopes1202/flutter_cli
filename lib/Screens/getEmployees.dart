@@ -19,7 +19,7 @@ class getAllEmployeesState extends State<getemployees> {
   var employess = List<EmployeeModel>.generate(200, (index) => null);
 
   Future<List<EmployeeModel>> getEmployees() async {
-    var data = await http.get('http://10.0.2.2:8080/getallemployees');
+    var data = await http.get('https://lippe-hero-app.herokuapp.com/getallemployees');
     var jsonData = json.decode(data.body);
 
     List<EmployeeModel> employee = [];

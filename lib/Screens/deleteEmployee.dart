@@ -13,7 +13,7 @@ class deleteEmployee extends StatefulWidget {
 }
 
 Future<EmployeeModel> deleteEmployees(String firstName, String lastName) async {
-  var Url = "http://localhost:8080/deleteemployee";
+  var Url = "https://lippe-hero-app.herokuapp.com/deleteemployee";
   var response = await http.delete(
     Url,
     headers: <String, String>{

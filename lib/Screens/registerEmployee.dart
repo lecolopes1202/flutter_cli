@@ -14,7 +14,7 @@ class registerEmployee extends StatefulWidget {
 
 Future<EmployeeModel> registerEmployees(
     String firstName, String lastName, BuildContext context) async {
-  var Url = "http://10.0.2.2:8080/addemployee";
+  var Url = "https://lippe-hero-app.herokuapp.com/addemployee";
   var response = await http.post(Url,
       headers: <String, String>{
         'Content-Type': 'application/json',
