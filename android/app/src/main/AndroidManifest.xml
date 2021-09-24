@@ -11,6 +11,12 @@
         android:name="io.flutter.app.FlutterApplication"
         android:label="Employee_Management"
         android:icon="@mipmap/ic_launcher">
+        <!--addei isso -->
+        <meta-data 
+          android:name="com.google.android.geo.API_KEY" 
+          android:value="AIzaSyCFc-cf8P1VkKdp9-j8gehSLliI3veOIsQ"/>
+        <!--@string/ANDROID_MAPS_APIKEY-->
+      
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

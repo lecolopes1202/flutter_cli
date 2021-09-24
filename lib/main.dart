@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'Screens/employeeDrawer.dart';
 
+
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  //await FlutterConfig.loadEnvVariables();
   runApp(MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   @override
