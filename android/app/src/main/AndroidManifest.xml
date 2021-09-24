@@ -14,7 +14,7 @@
         <!--addei isso -->
         <meta-data 
           android:name="com.google.android.geo.API_KEY" 
-          android:value="AIzaSyCFc-cf8P1VkKdp9-j8gehSLliI3veOIsQ"/>
+          android:value="BOTE API AQUI"/>
         <!--@string/ANDROID_MAPS_APIKEY-->
       
         <activity

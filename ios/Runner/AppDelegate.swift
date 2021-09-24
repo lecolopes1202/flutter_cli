@@ -10,7 +10,7 @@ import flutter_config
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     //let key: String = FlutterConfigPlugin.env(for: "IOS_MAPS_APIKEY")
-    GMSServices.provideAPIKey(AIzaSyA1Q0d050EsjmEIBPdaYipzQ7xflQXihgs) //key
+    GMSServices.provideAPIKey(BOTE API AQUI) //key
     GeneratedPluginRegistrant.register(with: self)
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
