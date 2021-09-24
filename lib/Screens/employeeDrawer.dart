@@ -1,5 +1,6 @@
 import 'package:Employee_Management/Screens/getEmployees.dart';
 import 'package:Employee_Management/Screens/registerEmployee.dart';
+import 'package:Employee_Management/Screens/mapsPage.dart';
 import 'package:flutter/material.dart';
 
 class employeeDrawer extends StatefulWidget {
@@ -16,7 +17,7 @@ class employeeDrawerState extends State<employeeDrawer> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Employee Management'),
+        title: Text('Host Management'),
       ),
       body: Center(child: Text('Welcome To PXP Channel')),
       drawer: Drawer(
@@ -24,27 +25,42 @@ class employeeDrawerState extends State<employeeDrawer> {
           padding: EdgeInsets.only(top: minimumPadding, bottom: minimumPadding),
           children: <Widget>[
             DrawerHeader(
-              child: Text('Employee Management'),
+              child: Text('Hostels Management'),
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
             ),
+            
             ListTile(
-              title: Text('Register Employee'),
+              title: Text('Register Visiters'),
               onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => registerEmployee()));
-              },
+                        builder: (context) => registerEmployee() 
+                        )
+                        );             
+               },
             ),
+           
             ListTile(
-              title: Text('Get Employees'),
+              title: Text('Get Visisters'),
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => getemployees()));
+                    MaterialPageRoute(builder: (context) => getemployees() 
+                    )
+                    );
               },
-            )
+            ),
+
+            ListTile( //Lista dos Maps
+              title: Text('Get Maps'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => mapsPage() )
+                    );
+              },
+            ),
           ],
         ),
       ),
