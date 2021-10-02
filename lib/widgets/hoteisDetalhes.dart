@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:Employee_Management/Model/hotelModel.dart';
+import 'package:Employee_Management/Model/hotel.dart';
+import 'package:Employee_Management/controller/hotelControllers.dart';
 
-class HoteisDetalhes extends StatelessWidget {
-  hotelModel hotel;
-  HoteisDetalhes({Key? key, required this.hotel}) : super(key: key);
-
+class HotelDetalhes extends StatelessWidget { // não terá nenhum estado
+  Hotel hotel;
+  HotelDetalhes({Key? key, required this.hotel}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

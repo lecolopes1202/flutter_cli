@@ -135,12 +135,12 @@ class MyAlertDialog extends StatelessWidget {
     return AlertDialog(
       title: Text(
         this.title,
-        style: Theme.of(context).textTheme.title,
+        style: Theme.of(context).textTheme.headline2,
       ),
       actions: this.actions,
       content: Text(
         this.content,
-        style: Theme.of(context).textTheme.body1,
+        style: Theme.of(context).textTheme.bodyText1,
       ),
     );
   }

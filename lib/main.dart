@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: mapsPage(),//employeeDrawer()
+      home: employeeDrawer(),//employeeDrawer() ou mapsPage()
     );
   }
 }

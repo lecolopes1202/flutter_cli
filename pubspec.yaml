@@ -17,8 +17,10 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 version: 1.0.0+1
 
+#environment:
+#  sdk: ">=2.7.0 <3.0.0"
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -50,8 +52,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  #assets:
-  #  - imagens/a_dot_burr.jpeg
+  assets:
+  - imagens/hotel.png
   #   - imagens/a_dot_ham.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

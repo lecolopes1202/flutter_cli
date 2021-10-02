@@ -22,7 +22,7 @@ Future<EmployeeModel> updateEmployees(
   var response = await http.put(Url,
       headers: <String, String>{"Content-Type": "application/json"},
       body: jsonEncode(employee));
-  String responseString = response.body;
+  String responseString = response.body; // que isso ?
   if (response.statusCode == 200) {
     showDialog(
         context: context,
@@ -54,7 +54,7 @@ class updateEmployeeState extends State<updateEmployee> {
     TextStyle textStyle = Theme.of(context).textTheme.subtitle2;
     return Scaffold(
         appBar: AppBar(
-          title: Text('Update Employee'),
+          title: Text('Update Visitor'),
           leading: IconButton(
             icon: Icon(Icons.arrow_back),
             onPressed: () {
@@ -157,12 +157,12 @@ class MyAlertDialog extends StatelessWidget {
     return AlertDialog(
       title: Text(
         this.title,
-        style: Theme.of(context).textTheme.title,
+        style: Theme.of(context).textTheme.headline2,
       ),
       actions: this.actions,
       content: Text(
         this.content,
-        style: Theme.of(context).textTheme.body1,
+        style: Theme.of(context).textTheme.bodyText1,
       ),
     );
   }

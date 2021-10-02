@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
-import 'package:Employee_Management/Model/hotelModel.dart';
+import 'package:Employee_Management/Model/hotel.dart';
 
 class HoteisRepository extends ChangeNotifier {
-  final List<hotelModel> _hoteis = [
-    hotelModel(
+  final List<Hotel> _hoteis = [
+    Hotel(
       nome: 'Hotel X',
       endereco: 'R. João Negrão, 1072 - Rebouças - Centro, Curitiba - PR',
       foto:
@@ -12,7 +12,7 @@ class HoteisRepository extends ChangeNotifier {
       latitude: -25.4361979,
       longitude: -49.2624613,
     ),
-    hotelModel(
+    Hotel(
       nome: 'Hoteol Y',
       endereco: 'Av. Presidente Affonso Camargo 10 - Rebouças, Curitiba - PR',
       foto:
@@ -20,7 +20,7 @@ class HoteisRepository extends ChangeNotifier {
       latitude: -25.435538,
       longitude: -49.2623809,
     ),
-    hotelModel(
+    Hotel(
       nome: 'Hotel Z',
       endereco: 'R. Tibagi, 652 - Centro, Curitiba - PR',
       foto:
@@ -30,5 +30,5 @@ class HoteisRepository extends ChangeNotifier {
     ),
   ];
 
-  List<hotelModel> get hoteis => _hoteis;
+  List<Hotel> get hoteis => _hoteis;
 }

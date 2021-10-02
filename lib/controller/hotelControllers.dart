@@ -1,12 +1,18 @@
+import 'dart:js';
+
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:provider/provider.dart';
 //import 'package:postos_locais/pages/postos_page.dart';
 //import 'package:postos_locais/repositories/postos_repository.dart';
 //import 'package:postos_locais/widgets/posto_detalhes.dart';
 import 'package:Employee_Management/Screens/mapsPage.dart';
 import 'package:Employee_Management/repositorio/hoteisRepository.dart';
-import 'package:Employee_Management/infos/hoteisDetalhes.dart';
+import 'package:Employee_Management/widgets/hoteisDetalhes.dart';
+//import 'package:Employee_Management/Model/hotel.dart';
+
+
 
 class HoteisController extends ChangeNotifier {
   double lat = 0.0;
@@ -16,9 +22,9 @@ class HoteisController extends ChangeNotifier {
   GoogleMapController _mapsController; // talvez precise de um late  GoogleMapController _mapsController;
 // olhar isso pro late https://blog.gskinner.com/archives/2021/03/flutter-lazy-instantiation-with-the-late-keyword.html
 
-  // PostosController() {
-  //   getPosicao();
-  // }
+   //PostosController() {
+    // getPosicao();
+   //}
   get mapsController => _mapsController;
 
   onMapCreated(GoogleMapController gmc) async {
@@ -29,27 +35,27 @@ class HoteisController extends ChangeNotifier {
 // Depois arrumar pra vir do BD
   loadPostos() {
     final hoteis = HoteisRepository().hoteis;
-    hoteis.forEach((posto) async {
+    hoteis.forEach(( hotel) async {
       markers.add(
         Marker(
-          markerId: MarkerId(posto.nome), // depois adionar pelo ID do DB
-          position: LatLng(posto.latitude, posto.longitude), //tbm
+          markerId: MarkerId(hotel.nome), // depois adionar pelo ID do DB
+          position: LatLng(hotel.latitude, hotel.longitude), //tbm
           icon: await BitmapDescriptor.fromAssetImage(
             ImageConfiguration(),
-            'images/posto.png',
+            'imagens/hotel.png',
           ),
           onTap: () => {
-            showModalBottomSheet(
-              context: appKey.currentState!.context,
-              builder: (context) => PostoDetalhes(posto: posto),
-            )
+            /*showModalBottomSheet(
+              context: appKey.currentState.context,
+              builder: (context) => HotelDetalhes(hotel: hotel),
+            )*/
           },
         ),
       );
     });
     notifyListeners();
   }
-*/
+
   getPosicao() async {
     try {
       Position posicao = await _posicaoAtual();
